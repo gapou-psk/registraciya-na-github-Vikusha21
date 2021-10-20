@@ -1,0 +1,17 @@
+USE BILLING_SIMPLE;
+
+SELECT * FROM BILLING WHERE payer_email ='vasya@mail.com';
+
+USE BILLING_SIMPLE;
+
+INSERT INTO BILLING (PAYER_EMAIL, RECIPIENT_EMAIL, SUM, CURRENCY, BILLING_DATE, COMMENT) values ('pasha@mail.com', 'katya@mail.com', 300.00, 'EUR', '2016-02-16', 'Valentines day present)');
+
+USE BILLING_SIMPLE;
+
+SELECT * FROM RECIPIENT_EMAIL;
+
+UPDATE BILLING SET RECIPIENT_EMAIL = 'igor@mail.com' WHERE recipient_email = 'alex@mail.com';
+
+USE BILLING_SIMPLE;
+
+DELETE FROM BILLING WHERE recipient_email = '' OR  payer_email ''
