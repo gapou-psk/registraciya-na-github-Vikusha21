@@ -1,0 +1,15 @@
+¹1 
+     SELECT departaments.name, users.name FROM departaments AS dept
+     INNER JOIN users
+     ON users.d_id = depts.id
+     WHERE users.name is NULL;
+¹2 
+     SELECT departaments.name, COUNT(users.name) FROM departaments AS dept
+     INNER JOIN users
+     ON dept.id = users.d_id
+     WHERE COUNT(users.name)>1;
+¹3 
+     SELECT users.name, departaments.name FROM departaments AS dept
+     RIGHT JOIN users
+     ON dept.id = uaers._id
+     WHERE dept.name is NULL;
